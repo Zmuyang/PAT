@@ -1,7 +1,5 @@
 #include <iostream>
-using std::cout; 
-using std::cin;
-using std::endl;
+using namespace std;
 
 int main(void){
 	int n=0,step=0;

@@ -1,14 +1,14 @@
 #include <iostream>
-#include <algorithm>
+#include <algorithm> //sort
 
 using namespace std;
 
-int cmp(int a,int b) {return a > b;}
+int cmp(int a,int b) {return a > b;} // 降序排序 
 
 int main(){
 	int n(0);
 	cin >> n;
-	int *a = new int[n];
+	int *a = new int[n];   //C++ 
 	for(int i=0;i<n;i++){
 		cin >> a[i];
 	}
@@ -33,13 +33,13 @@ int main(){
 	int temp(0);
 	for(int i=n-1;i>=0;i--){
 		if(a[i]!=999){
-			temp=i;
+			temp=i;   // temp是第一个不等于999的下标 
 		}
 	}
 	for(int i=temp;i<n-1;i++){
 		cout << a[i] << " ";
 	}
 	cout << a[n-1];
-	delete [] a;
+	delete [] a; // c++ 
 	return 0;
 }
