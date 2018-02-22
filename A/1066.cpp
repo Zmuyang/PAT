@@ -67,10 +67,10 @@ void insert(node* &root,int v){
 	}else{
 		insert(root->rchild,v);
 		updateHeight(root);
-		if(getBalanceFactor(root)==-2){
-			if(getBalanceFactor(root->rchild)==-1){
+		if(getBalanceFactor(root)==-2){   
+			if(getBalanceFactor(root->rchild)==-1){		 //RR型 
 				L(root);
-			}else if(getBalanceFactor(root->rchild)==1){
+			}else if(getBalanceFactor(root->rchild)==1){  //RL型 
 				R(root->rchild);
 				L(root);
 			}
@@ -78,7 +78,7 @@ void insert(node* &root,int v){
 	}
 }
 
-node* Create(int data[],int n){
+node* Create(int data[],int n){  //AVL树的建立 
 	node *root = nullptr;
 	for(int i=0;i<n;i++){
 		insert(root,data[i]);
