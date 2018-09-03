@@ -5,7 +5,7 @@ bool cmp(char a,char b){return a>b;}
 int main(){
 	string s;
 	cin >> s;
-	s.insert(0,4-s.length(),'0');
+	s.insert(0,4-s.length(),'0'); //不足4位的时候前面补0； 
 	do{
 		string a=s,b=s;
 		sort(a.begin(),a.end(),cmp);
